@@ -29,6 +29,9 @@ class Ator():
         self.x, self.y = round(self.x), round(self.y)
         return self.x, self.y
 
+    def resetar(self):
+            self._tempo_de_colisao = None
+
     def colidir(self, outro_ator, tempo, intervalo=1):
         if self.status(tempo) == DESTRUIDO or outro_ator.status(tempo) == DESTRUIDO:
             return
